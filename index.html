@@ -42,17 +42,19 @@
             }
         }
 
-        // Inicializamos la variable
+        // Inicializamos las variables
+        let usuario = '';
         let clave = '';
         let texto = '';
         let cont = 0;
 
-        // Usamos el bucle while para contar hasta 10
-        while (clave != '1234') {
+        // Hasta que la clave sea correcta, continue el flujo.
+        while (clave != '1234' && usuario != 'juan') {
 
             if(cont > 0){
                 texto = "intente nuevamente. No. Intento "+cont;
             }
+            usuario = prompt("Por favor "+texto+", ingresa su usuario:");
             clave = prompt("Por favor "+texto+", ingresa su clave:");
             cont++;
         }
